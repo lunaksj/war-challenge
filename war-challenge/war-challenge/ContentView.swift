@@ -9,24 +9,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var playerCard = "card5"
+    @State private var cpuCard = "card9"
+    @State private var playerScore = 0
+    @State private var cpuScore = 0
+    
     var body: some View {
         ZStack{
-            Image("background")
-                            .edgesIgnoringSafeArea(.all)
+            Image("background").edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
                 Image("logo")
                 Spacer()
                 HStack{
                     Spacer()
-                    Image("card3")
+                    Image(playerCard)
                     Spacer()
-                    Image("card4")
+                    Image(cpuCard)
                     Spacer()
                 }
                 Spacer()
                 Button {
-                    print("deal")
+                    // Generate a random number between 2 and 14
+                    let playerRand = Int.random(in: 2...14)
+                    let cpuRand = Int.random(in: 2...14)
+                    
+                    // Update the cards
+                    playerCard = "card" + String(playerRand)
+                    cpuCard = "card" + String(cpuRand)
+                
+                    // Update the score
+                    playerScore += 1
+                    cpuScore += 1
                 } label: {
                     Image("dealbutton")
                 }
@@ -39,7 +54,7 @@ struct ContentView: View {
                             .font(.headline)
                             .padding(.bottom, 10.0)
                             .foregroundColor(Color.white)
-                        Text("0")
+                        Text(String(playerScore))
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }
@@ -49,7 +64,7 @@ struct ContentView: View {
                             .font(.headline)
                             .padding(.bottom, 10.0)
                             .foregroundColor(Color.white)
-                        Text("0")
+                        Text(String(cpuScore))
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }
