@@ -10,3 +10,7 @@ https://www.youtube.com/watch?v=F2ojC6TNwws
 
 
 (관련 리소스등은 위 유튜브 영상의 더보기 란에 링크된 사이트에서 받을 수 있음)
+
+
+https://user-images.githubusercontent.com/10972764/151998850-c5f53877-4476-4c84-ace8-41259edf6354.mov
+
