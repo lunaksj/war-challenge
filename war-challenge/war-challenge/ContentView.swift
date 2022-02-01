@@ -18,11 +18,11 @@ struct ContentView: View {
                 Image("logo")
                 Spacer()
                 HStack{
-                                        Spacer()
+                    Spacer()
                     Image("card3")
-                                        Spacer()
+                    Spacer()
                     Image("card4")
-                                        Spacer()
+                    Spacer()
                 }
                 Spacer()
                 Image("dealbutton")
@@ -33,10 +33,10 @@ struct ContentView: View {
                         Text("Player")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                                                    .foregroundColor(Color.white)
+                            .foregroundColor(Color.white)
                         Text("0")
                             .font(.largeTitle)
-                                                    .foregroundColor(Color.white)
+                            .foregroundColor(Color.white)
                     }
                     Spacer()
                     VStack{
